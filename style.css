@@ -25,13 +25,25 @@ div.blur {
 }
 
 header {
-  translate: -8px -8px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 64px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   background: var(--header-color);
+}
+
+main {
+  position: fixed;
+  left: 0;
+  top: 64px;
+  width: calc(100vw - 16px);
+  height: calc(100vh - 80px);
+  margin: 8px;
+  overflow-y: scroll;
 }
 
 a.avatar {
@@ -69,7 +81,7 @@ a.avatar img {
     position: fixed;
     left: 64px;
     top: 0;
-    margin: 8px;
     width: calc(100vw - 80px);
+    height: calc(100vh - 16px);
   }
 }
