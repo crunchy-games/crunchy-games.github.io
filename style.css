@@ -5,6 +5,7 @@
   --header-color: #7c2492;
   --text-color: lightblue;
   --link-color: #c000a6;
+  --visited-color: #a1008c;
 }
 
 html {
@@ -14,7 +15,8 @@ html {
 }
 
 body {
-  margin: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
   background: var(--background-color);
 }
 
@@ -37,9 +39,11 @@ header {
 }
 
 main {
-  position: fixed;
+  position: absolute;
+  margin-left: 40px;
+  margin-right: 40px;
   left: 0;
-  top: 64px;
+  top: 64px; /* Most band-aid ass fix I've ever seen. NC, I am coming for you. */
   width: calc(100vw - 16px);
   height: calc(100vh - 80px);
   margin: 8px;
@@ -66,6 +70,14 @@ a.avatar img {
   height: 48px;
   border-radius: 8px;
   position: absolute;
+}
+
+a:link {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--visited-color);
 }
 
 @media screen and (max-width: 1080px) {
