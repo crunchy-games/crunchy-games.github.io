@@ -1,8 +1,21 @@
 @import url(fonts/style.css);
 
+:root {
+  --background-color: #450057; 
+  --header-color: #7c2492;
+  --text-color: lightblue;
+  --link-color: #c000a6;
+}
+
+html {
+  color: var(--text-color);
+  align-items: center;
+  text-align: center;
+}
+
 body {
   margin: 8px;
-  background: #fff;
+  background: var(--background-color);
 }
 
 div.blur {
@@ -18,7 +31,7 @@ header {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  background: #eee;
+  background: var(--header-color);
 }
 
 a.avatar {
