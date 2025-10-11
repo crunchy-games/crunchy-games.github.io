@@ -9,6 +9,7 @@
 /* CUSTOM ELEMENTS
   <avatar img="imageURL" href="link" name="name" circle?></avatar>
   <markdown>Markdown text</markdown>
+  <md>Markdown text</md>
 */
 
 /* CHUNK DICTIONARY
@@ -71,7 +72,6 @@ element.innerHTML = randomMessages[ranIndex];
 
 
 // MARKDOWN - No editing under any circumstances
-const mdElements = document.querySelectorAll('markdown');
 function formatMD(text) {
   const newlineRegex = /(?:\n{2,}$)+/gm;
   text = text.replace(newlineRegex, '<br>\n');
@@ -114,6 +114,7 @@ function formatMD(text) {
   return element.innerHTML;
 }
 
+const mdElements = document.querySelectorAll('markdown, md');
 mdElements.forEach(e => {
   const div = document.createElement('div');
   div.className = 'markdown';
