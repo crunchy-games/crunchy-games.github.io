@@ -43,7 +43,7 @@ main {
   margin-left: 40px;
   margin-right: 40px;
   left: 0;
-  top: 64px; /* Most band-aid ass fix I've ever seen. NC, I am coming for you. */
+  top: 64px;
   width: calc(100vw - 16px);
   height: calc(100vh - 80px);
   margin: 8px;
