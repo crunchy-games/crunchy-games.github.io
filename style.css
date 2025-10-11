@@ -55,3 +55,21 @@ a.avatar img {
   border-radius: 8px;
   position: absolute;
 }
+
+@media screen and (max-width: 1080px) {
+  header {
+    height: 100vh;
+    width: 64px;
+    overflow-x: hidden;
+    white-space: wrap;
+    overflow-y: scroll;
+  }
+
+  main {
+    position: fixed;
+    left: 64px;
+    top: 0;
+    margin: 8px;
+    width: calc(100vw - 80px);
+  }
+}
