@@ -65,9 +65,9 @@ const randomMessages = [
 ];
 
 const ranIndex = Math.floor(Math.random() * randomMessages.length);
-const element = document.getElementById("ran-message") || document.createElement('div');
+const element = document.getElementById("ran-message");
 
-element.innerHTML = randomMessages[ranIndex];
+if (element) element.innerHTML = randomMessages[ranIndex];
 
 
 
