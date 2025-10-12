@@ -65,7 +65,7 @@ const randomMessages = [
 ];
 
 const ranIndex = Math.floor(Math.random() * randomMessages.length);
-const element = document.getElementById("ran-message");
+const element = document.getElementById("ran-message") || document.createElement('div');
 
 element.innerHTML = randomMessages[ranIndex];
 
@@ -73,7 +73,7 @@ element.innerHTML = randomMessages[ranIndex];
 
 // MARKDOWN - No editing under any circumstances
 function formatMD(text) {
-  const newlineRegex = /(?:\n{2,}$)+/gm;
+  const newlineRegex = /(?:[\n ]{2,}$)+/gm;
   text = text.replace(newlineRegex, '<br>\n');
   
   const boldRegex = /([_*]{2})(.*?)\1/g;
@@ -114,11 +114,13 @@ function formatMD(text) {
   return element.innerHTML;
 }
 
-const mdElements = document.querySelectorAll('markdown, md');
-mdElements.forEach(e => {
-  const div = document.createElement('div');
-  div.className = 'markdown';
-  div.innerHTML = formatMD(e.innerHTML);
+document.addEventListener('DOMContentLoaded', () => {
+  const mdElements = document.body.querySelectorAll('markdown, md');
+  mdElements.forEach(e => {
+    const div = document.createElement('div');
+    div.className = 'markdown';
+    div.innerHTML = formatMD(e.innerHTML);
 
-  e.replaceWith(div);
+    e.replaceWith(div);
+  });
 });
