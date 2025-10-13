@@ -91,7 +91,7 @@ function formatMD(text) {
   const linkRegex = /\[(.*?)]\((.*?)\)/g;
   text = text.replace(linkRegex, '<a href="$2">$1</a>');
 
-  const blockRegex = /```([\s\S]*?)```/g;
+  const blockRegex = /```(.*?)```/gs;
   text = text.replace(blockRegex, '<pre><code>$1</code></pre>');
 
   const inlineRegex = /`(.*?)`/g;
