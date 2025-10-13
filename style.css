@@ -1,23 +1,17 @@
 @import url(fonts/style.css);
 
-:root {
+body {
   --background-color: #450057; 
   --header-color: #7c2492;
-  --text-color: lightblue;
+  --img-color: #681f7a;
+  --text-color: #add8e6;
   --link-color: #c000a6;
   --visited-color: #a1008c;
-}
-
-html {
-  color: var(--text-color);
-  align-items: center;
-  text-align: center;
-}
-
-body {
   margin-left: 20px;
   margin-right: 20px;
+  text-align: center;
   background: var(--background-color);
+  color: var(--text-color);
 }
 
 div.blur {
@@ -70,6 +64,7 @@ a.avatar img {
   height: 48px;
   border-radius: 8px;
   position: absolute;
+  background: var(--img-color);
 }
 
 a:link {
